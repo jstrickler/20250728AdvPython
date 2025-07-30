@@ -14,5 +14,5 @@ print(f"hit count is {hit_count:03d} average is {average:.2f}")
 print()
 
 # any expression is OK
-print(f"2 + 2 is {2 + 2}")
+print(f"2 + 2 is {2 + 2:.2f}")
 

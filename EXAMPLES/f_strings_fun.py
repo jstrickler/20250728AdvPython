@@ -36,3 +36,5 @@ print()
 
 # fun with functions
 print(f"length of 'name': {len(name)}")  # function call OK
+
+print(f"{amount = }")

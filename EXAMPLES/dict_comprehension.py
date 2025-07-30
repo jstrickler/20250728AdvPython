@@ -16,3 +16,8 @@ capitals = {'NY': 'ALBANY', 'NC': 'RALEIGH', 'CA': 'SACRAMENTO', 'VT': 'MONTPELI
 caps = {state: capital.title() for state, capital in capitals.items()}
 pprint(caps)
 
+caps = {capital.title(): state for state, capital in capitals.items()}
+pprint(caps)
+
+caps = {capital.title(): (i, state) for i, (state, capital) in enumerate(capitals.items())}
+pprint(caps, sort_dicts=False)

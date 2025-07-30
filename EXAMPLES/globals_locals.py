@@ -18,5 +18,11 @@ pprint(globals())
 print()
 
 g = globals()
+f = g['spam']
+f('apple')
+
+
+
+g = globals()
 g['color'] = "blue"  # create a new variable
 print("color:", color)

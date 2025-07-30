@@ -23,3 +23,4 @@ def strip_article(title):  # create function which takes element to compare and 
 
 for book in sorted(books, key=strip_article):  # sort using custom function
     print(book)
+

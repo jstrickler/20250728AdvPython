@@ -1,4 +1,3 @@
-#
 from dateutil import parser
 
 date_strings = [  # list of assorted date strings
@@ -29,3 +28,4 @@ for date_string in date_strings:
         print(dt)
     except ValueError as err:
         print(err)
+
