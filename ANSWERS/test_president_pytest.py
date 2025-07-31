@@ -13,10 +13,10 @@ def test_date_fields_return_dates_or_none(term_number):
         p = President(term_number)
         assert isinstance(p.birth_date, date) or p.birth_date is None
         assert isinstance(p.death_date, date) or p.death_date is None
-        assert isinstance(p.term_start_date, date) or p.term_start_date is None
-        assert isinstance(p.term_end_date, date) or p.term_end_date is None
+        assert isinstance(p.term_start, date) or p.term_start is None
+        assert isinstance(p.term_end, date) or p.term_end is None
 
-@pytest.mark.parametrize('invalid_term', [-1, 0, 46, 1000])
+@pytest.mark.parametrize('invalid_term', [-1, 0, 49, 1000])
 def test_invalid_term_raises_error(invalid_term):
     with pytest.raises(ValueError):
             p = President(invalid_term)

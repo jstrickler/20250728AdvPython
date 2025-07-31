@@ -1,5 +1,6 @@
 import os
 import psutil
+import gc
 
 class MemoryChecker():
     """
@@ -16,5 +17,11 @@ class MemoryChecker():
         return self.process.memory_info().rss  # Return memory use for PID
 
 if __name__ == '__main__':
+    import time
     mc = MemoryChecker()
     print(mc())  # can call at any time to get current memory use
+    x = [True] * 10_000_000
+    print(mc())
+    del x
+    gc.collect()
+    print(mc())
