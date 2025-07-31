@@ -5,6 +5,7 @@ import os
 
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QColorDialog, QErrorMessage, QInputDialog
 from PyQt5.QtGui import QColor
+import qdarktheme
 
 from ui_standard_dialogs import Ui_StandardDialogs
 
@@ -15,7 +16,7 @@ class StandardDialogsMain(QMainWindow):
         self.ui = Ui_StandardDialogs()
         self.ui.setupUi(self)
 
-        self.ui.actionQuit.triggered.connect(lambda:self.close())
+        self.ui.actionQuit.triggered.connect(self.close)
 
         # Connect up the buttons.
         self.ui.btFile.clicked.connect(self._choose_file)  # setup buttons to invoke builtin dialogs
@@ -53,6 +54,7 @@ class StandardDialogsMain(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    qdarktheme.setup_theme("dark")
     main = StandardDialogsMain()
     main.show()
     sys.exit(app.exec_())

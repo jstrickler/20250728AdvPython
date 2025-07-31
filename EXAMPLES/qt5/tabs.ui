@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tabA">
      <attribute name="title">
@@ -87,8 +87,12 @@
       </property>
       <property name="font">
        <font>
+        <family>Gurmukhi MN</family>
         <pointsize>60</pointsize>
        </font>
+      </property>
+      <property name="toolTip">
+       <string>Favorite Fruit</string>
       </property>
       <property name="text">
        <string>Cherry</string>
@@ -103,7 +107,7 @@
      <x>0</x>
      <y>0</y>
      <width>526</width>
-     <height>25</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuTabs">
